@@ -1,0 +1,138 @@
+/* ============================
+   🎯 GRILLE DU MEGA MENU
+   ============================ */
+.mega-menu__grid,
+[data-menu-grid-id^="MegaMenuList"] {
+  --menu-columns-desktop: 3;
+  --menu-columns-tablet: 4;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1rem !important;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ============================
+   📌 TEXTE & STRUCTURE
+   ============================ */
+
+/* Centrer le contenu textuel */
+.mega-menu__item {
+  text-align: center;
+}
+
+/* Titre principal avec séparation */
+.mega-menu__item > a:first-child {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Espacement entre les liens */
+.mega-menu__item a {
+  margin-bottom: 0.7rem;
+  display: inline-block;
+}
+
+/* ============================
+   🖼️ IMAGES CLIQUABLES PERSONNALISÉES
+   ============================ */
+
+.mega-menu__column--image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+/* Lien image : contient l'image et le texte */
+.custom-image-link {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Image : contenue proprement dans le cadre */
+.custom-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom au survol */
+.custom-image-link:hover .custom-image {
+  transform: scale(1.05);
+}
+
+/* Texte sur l’image */
+.custom-image-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+/* ============================
+   ✨ LIENS : STYLE TEXTE + HOVER
+   ============================ */
+
+.mega-menu__link {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding: 0.2rem 0;
+  position: relative;
+  display: inline-block;
+  color: #222;
+  transition: color 0.3s ease;
+  margin-bottom: 0.7rem !important;
+}
+
+.mega-menu__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #f69cc3;
+  transition: width 0.3s ease;
+}
+
+.mega-menu__link:hover::after {
+  width: 100%;
+}
+/* 🌸 Texte en rose pastel pour SÉLECTION -20% */
+/* 🌸 Texte blanc avec contour rose pastel */
+.highlight-text {
+  color: white !important;
+  text-shadow: 0 0 4px #b964b9, 0 0 8px #b964b9, 0 0 12px #b964b9;
+}
+.mega-menu__list {
+  padding-top: 1rem; /* ou essaye 2rem si tu veux plus */
+}
+[data-menu-grid-id="MegaMenuList-2"],
+[data-menu-list-id="MegaMenuList-2"] {
+  --menu-columns-desktop: 3 !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1rem !important; /* ajuste l’espacement si besoin */
+  justify-content: center !important;
+}
+[data-menu-grid-id="MegaMenuList-2"] .mega-menu__column--span-1 {
+  display: none !important;
+}

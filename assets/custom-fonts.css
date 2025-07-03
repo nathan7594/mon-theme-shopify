@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url('{{ "montserrat.woff2" | asset_url }}') format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

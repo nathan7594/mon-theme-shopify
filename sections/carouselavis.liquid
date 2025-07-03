@@ -1,0 +1,135 @@
+{% schema %}
+{
+  "name": "Carrousel d'avis",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Carrousel d'avis client"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="carousel-wrapper">
+  <div class="carousel-track">
+    {% assign raw_reviews = "Monique|68|5|Enfin des vêtements où je me sens belle et libre de mes mouvements. Merci pour cette élégance sans compromis.;Colette|75|4|J'ai toujours eu du mal à trouver ma taille. Ici, non seulement ça me va, mais je me sens féminine et bien dans ma peau.;Jacqueline|62|5|Le tissu est doux, fluide, je ne me sens pas comprimée. Et pourtant c’est chic !;Yvonne|81|5|C’est la première fois que je reçois autant de compliments sur une tenue. Et je me sens à l’aise !;Chantal|58|4|Marre de m’habiller comme une tente. Ici je me sens enfin stylée, même avec mes rondeurs.;Andrée|70|5|Chaque pièce que j’ai achetée tombe parfaitement. Pas besoin de tout cacher, juste de se sentir bien.;Suzanne|85|5|Même à mon âge, j’aime me sentir belle. Vos vêtements sont une vraie caresse sur la peau.;Josiane|64|5|Quand je porte vos robes, je marche plus droite. J’assume mon corps, et je me sens jolie." | split: ";" %}
+
+
+
+    {% for i in (1..2) %}
+      {% for review in raw_reviews %}
+        {% assign parts = review | split: "|" %}
+        {% assign name = parts[0] %}
+        {% assign age = parts[1] %}
+        {% assign rating = parts[2] | plus: 0 %}
+        {% assign text = parts[3] %}
+
+        {% if rating >= 4 %}
+          <div class="carousel-item">
+            <div class="text-block">
+              <p class="text">"{{ text }}"</p>
+            </div>
+            <div class="stars-block">
+              <div class="stars">
+                {% for star in (1..rating) %}★{% endfor %}
+              </div>
+            </div>
+            <div class="meta-block left-align">
+              <p class="meta">— {{ name }}, {{ age }} ans</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: #fafafa;
+  padding: 2rem 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 60s linear infinite; /* ralentit ici */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 340px; /* largeur augmentée */
+  margin: 0 1rem;
+  padding: 1.2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 240px; /* hauteur augmentée */
+}
+
+.text-block,
+.stars-block,
+.meta-block {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-block {
+  min-height: 80px; /* hauteur augmentée */
+}
+
+.left-align {
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.stars {
+  color: #f7c948;
+  font-size: 1.2rem;
+}
+
+.text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+}
+
+.meta {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 260px;
+    margin: 0 0.5rem;
+    height: 240px;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+  }
+}
+
+</style>
