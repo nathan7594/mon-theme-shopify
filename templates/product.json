@@ -1150,7 +1150,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h3>Frequently asked questions</h3>",
+            "text": "<h3>Questions fréquentes</h3>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -1194,16 +1194,16 @@
             "accordion_row_W4xaxD": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?",
+                "heading": "<span class='faq-question'>Quelle est votre politique de retour ?</span>",
                 "open_by_default": false
               },
               "blocks": {
                 "text_9fJaE6": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn’t the case, let us know and we’ll do our best to work with you to make it right. </p>",
+                    "text": "<p>Vous disposez de 14 jours 🗓️ après réception 📦 pour retourner un article non utilisé, dans son emballage d’origine. Les frais de retour sont à votre charge 💸.</p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "full",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -1231,16 +1231,16 @@
             "accordion_row_ckQjmJ": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are any purchases final sale?",
+                "heading": "<span class='faq-question'>Quand vais-je recevoir ma commande ?</span>",
                 "open_by_default": false
               },
               "blocks": {
                 "text_R8jL4V": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
+                    "text": "<p>La livraison prend généralement entre 8 et 10 jours ouvrés 🚚.</p><p>Un jour ouvré correspond à un jour où les services postaux travaillent 📮, c’est-à-dire du lundi au vendredi 📆, hors week-ends et jours fériés ❌.</p><p>Vous pouvez suivre l’avancement de votre commande à tout moment via l’onglet <em>« Suivre ma commande »</em> 🔎, en saisissant votre numéro de commande. </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "full",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -1269,7 +1269,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_dash_row",
               "settings": {
-                "heading": "When will I get my order?",
+                "heading": "<span class='faq-question'>Où puis-je trouver mon numéro de commande ?</span>",
                 "open_by_default": false
               },
               "blocks": {
@@ -1277,9 +1277,9 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "text": "<p>Il est indiqué dans l’e-mail de confirmation que vous recevez juste après l’achat 📧.</p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "full",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -1318,7 +1318,7 @@
                   "settings": {
                     "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value. </p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "full",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -1357,7 +1357,7 @@
                   "settings": {
                     "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "full",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
