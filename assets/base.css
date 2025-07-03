@@ -4323,17 +4323,3 @@ text-component {
   transform: none;
   box-shadow: none;
 }
-/*.mega-menu__list {
-    justify-items: center;
-}*/
-/* .mega-menu__list {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  max-width: 800px;
-  margin: 0 auto;
-  gap: 20px;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-}
-*/
